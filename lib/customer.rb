@@ -1,3 +1,17 @@
 class Customer
   
+  def initialization [name, age]
+    @name = name
+    @age = age
+    @@all << self
+end
+
+def self.all
+  @@all
+end
+
+def new_meal(waiter, total,tip = 0)
+  Meal.all.select do |meal|
+    meal.waiter
+  end
 end
